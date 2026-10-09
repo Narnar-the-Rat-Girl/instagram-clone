@@ -4,8 +4,8 @@ const instatheme: Theme = {
   ...DarkTheme,
   colors: {
     ...DarkTheme.colors,
-    background: "#0b0e15",
-    card: "#0b0e15",
+    background: "#000000",
+    card: "#000000",
     text: "#ffffff",
   },
 };
@@ -15,6 +15,7 @@ export default function RootLayout() {
     <ThemeProvider value={instatheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="dms" options={{ headerShown: false }} />
       </Stack>
     </ThemeProvider>
   );

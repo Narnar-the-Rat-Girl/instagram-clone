@@ -1,6 +1,7 @@
 import { Ionicons } from "@expo/vector-icons";
 import { Image } from "expo-image";
 import { StyleSheet, Text, View } from "react-native";
+import PropButton from "./PropButton";
 
 type PostProps = {
   username: string;
@@ -33,19 +34,27 @@ export default function Post({
       <View>
         <View style={styles.iconbar}>
           <View style={styles.iconwtext}>
-            <Ionicons name="heart-outline" size={24} color="white" />
+            <PropButton>
+              <Ionicons name="heart-outline" size={24} color="white" />
+            </PropButton>
             <Text style={styles.datetext}>{likes}</Text>
           </View>
           <View style={styles.iconwtext}>
-            <Ionicons name="chatbubble-outline" size={24} color="white" />
+            <PropButton>
+              <Ionicons name="chatbubble-outline" size={24} color="white" />
+            </PropButton>
             <Text style={styles.datetext}>{comments}</Text>
           </View>
           <View style={styles.iconwtext}>
-            <Ionicons name="repeat-outline" size={24} color="white" />
+            <PropButton>
+              <Ionicons name="repeat-outline" size={24} color="white" />
+            </PropButton>
             <Text style={styles.datetext}>{reposts}</Text>
           </View>
           <View style={styles.iconwtext}>
-            <Ionicons name="paper-plane-outline" size={24} color="white" />
+            <PropButton>
+              <Ionicons name="paper-plane-outline" size={24} color="white" />
+            </PropButton>
             <Text style={styles.datetext}>{shares}</Text>
           </View>
         </View>
@@ -81,9 +90,9 @@ const styles = StyleSheet.create({
     paddingLeft: 7,
   },
   profilepic: {
-    width: 28,
+    width: 33,
     borderRadius: 14,
-    height: 28,
+    height: 33,
   },
   commenttext: {
     color: "white",

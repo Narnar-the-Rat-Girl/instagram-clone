@@ -1,15 +1,16 @@
 import { Image, StyleSheet, Text, View } from "react-native";
+import PropButton from "./PropButton";
 
 type StoryBarProps = { username: string; avatar: string };
 
 export default function StoryBar({ username, avatar }: StoryBarProps) {
   return (
-    <View>
+    <PropButton>
       <View style={styles.storycontainer}>
         <Image source={{ uri: avatar }} style={styles.profilepic} />
         <Text style={styles.usernametext}>{username}</Text>
       </View>
-    </View>
+    </PropButton>
   );
 }
 

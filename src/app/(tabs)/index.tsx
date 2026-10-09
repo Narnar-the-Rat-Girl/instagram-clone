@@ -2,6 +2,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { Image, ScrollView, StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Post from "../../../components/Post";
+import PropButton from "../../../components/PropButton";
 import StoryBar from "../../../components/StoryBar";
 
 export default function Index() {
@@ -9,12 +10,18 @@ export default function Index() {
     <SafeAreaView style={styles.safearea}>
       <ScrollView>
         <View style={styles.topbar}>
-          <Ionicons name="heart-outline" size={24} color="white" />
-          <Image
-            source={require("../../../assets/instaassests/Instagram.png")}
-            style={styles.logo}
-          ></Image>
-          <Ionicons name="heart-outline" size={24} color="white" />
+          <PropButton>
+            <Ionicons name="add-outline" size={30} color="white" />
+          </PropButton>
+          <PropButton>
+            <Image
+              source={require("../../../assets/instaassests/Instagram.png")}
+              style={styles.logo}
+            ></Image>
+          </PropButton>
+          <PropButton>
+            <Ionicons name="heart-outline" size={30} color="white" />
+          </PropButton>
         </View>
 
         <ScrollView horizontal={true}>
@@ -24,32 +31,32 @@ export default function Index() {
               username="ashley"
             ></StoryBar>
             <StoryBar
-              avatar="https://i.pravatar.cc/300?img=1"
-              username="ashley"
+              avatar="https://i.pravatar.cc/300?img=2"
+              username="rose"
             ></StoryBar>
             <StoryBar
-              avatar="https://i.pravatar.cc/300?img=1"
-              username="ashley"
+              avatar="https://i.pravatar.cc/300?img=3"
+              username="luna"
             ></StoryBar>
             <StoryBar
-              avatar="https://i.pravatar.cc/300?img=1"
-              username="ashley"
+              avatar="https://i.pravatar.cc/300?img=4"
+              username="jhon"
             ></StoryBar>
             <StoryBar
-              avatar="https://i.pravatar.cc/300?img=1"
-              username="ashley"
+              avatar="https://i.pravatar.cc/300?img=5"
+              username="user1231"
             ></StoryBar>
             <StoryBar
-              avatar="https://i.pravatar.cc/300?img=1"
-              username="ashley"
+              avatar="https://i.pravatar.cc/300?img=6"
+              username="ratlover42"
             ></StoryBar>
             <StoryBar
-              avatar="https://i.pravatar.cc/300?img=1"
-              username="ashley"
+              avatar="https://i.pravatar.cc/300?img=7"
+              username="kai"
             ></StoryBar>
             <StoryBar
-              avatar="https://i.pravatar.cc/300?img=1"
-              username="ashley"
+              avatar="https://i.pravatar.cc/300?img=8"
+              username="ashleybutagain"
             ></StoryBar>
           </View>
         </ScrollView>
@@ -64,7 +71,7 @@ export default function Index() {
           shares="121"
         ></Post>
         <Post
-          username="ashley"
+          username="rose"
           profilePic="https://i.pravatar.cc/300?img=2"
           imageUrl="https://picsum.photos/seed/post2/600/800"
           postText="wow I love rats"
@@ -74,7 +81,7 @@ export default function Index() {
           shares="121"
         ></Post>
         <Post
-          username="ashley"
+          username="luna"
           profilePic="https://i.pravatar.cc/300?img=3"
           imageUrl="https://picsum.photos/seed/post3/600/800"
           postText="wow I love rats"
@@ -84,7 +91,7 @@ export default function Index() {
           shares="121"
         ></Post>
         <Post
-          username="ashley"
+          username="jhon"
           profilePic="https://i.pravatar.cc/300?img=4"
           imageUrl="https://picsum.photos/seed/post4/600/800"
           postText="wow I love rats"
@@ -103,9 +110,6 @@ const styles = StyleSheet.create({
   story: {
     alignItems: "flex-start",
     flexDirection: "row",
-  },
-  page: {
-    backgroundColor: "black",
   },
   topbar: {
     flexDirection: "row",

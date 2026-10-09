@@ -1,3 +1,4 @@
+import { router } from "expo-router";
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 
 type UserMsgsProps = {
@@ -13,6 +14,12 @@ export default function UserMsgs({
 }: UserMsgsProps) {
   return (
     <Pressable
+      onPress={() =>
+        router.push({
+          pathname: "/dms",
+          params: { username, avatar },
+        })
+      }
       style={({ pressed }) => ({
         backgroundColor: pressed ? "rgb(62, 63, 65)" : "transparent",
       })}
@@ -45,7 +52,7 @@ const styles = StyleSheet.create({
     height: 70,
   },
   lastactivetext: {
-    color: "#ffffff",
+    color: "#A8A8A8",
     fontWeight: 500,
     fontSize: 13,
   },

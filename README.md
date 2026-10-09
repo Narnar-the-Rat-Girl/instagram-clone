@@ -54,3 +54,13 @@ Join our community of developers creating universal apps.
 
 - [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
 - [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+
+## attributes
+
+used for royalty free avatars
+https://i.pravatar.cc
+
+used for royalty free photos
+https://picsum.photos
+
+Icons from Ionicons
